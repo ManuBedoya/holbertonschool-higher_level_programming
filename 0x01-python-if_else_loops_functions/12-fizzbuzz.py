@@ -8,7 +8,4 @@ def fizzbuzz():
             text = "Fizz"
         elif (i % 5 == 0):
             text = "Buzz"
-        if (i == 100):
-            print("{}".format(text))
-        else:
-            print("{}".format(text), end=' ')
+        print("{}".format(text), end=' ')
