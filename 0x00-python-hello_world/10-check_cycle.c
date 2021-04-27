@@ -1,6 +1,4 @@
 #include "lists.h"
-#include <string.h>
-#include <stdio.h>
 /**
  *check_cycle - Check a circule list
  *@list: header of the list
@@ -10,11 +8,13 @@ int check_cycle(listint_t *list)
 {
 	listint_t *aux = list;
 
+	list->n = -999;
 	list = list->next;
 	while (list != NULL)
 	{
-		if (list == aux)
+		if (list->n == -999)
 			return (1);
+		list->n = -999;
 		list = list->next;
 	}
 	return (0);
