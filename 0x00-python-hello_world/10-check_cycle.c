@@ -6,6 +6,8 @@
  */
 int check_cycle(listint_t *list)
 {
+	if (list == NULL)
+		return (0);
 	list->n = -999;
 	list = list->next;
 	while (list != NULL)
