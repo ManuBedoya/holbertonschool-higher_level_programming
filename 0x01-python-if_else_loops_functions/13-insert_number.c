@@ -1,9 +1,9 @@
 #include "lists.h"
 /**
- *insert_node - Insert a node with the number in the correct position
- *@head: Pointer with the head of the list
+ *insert_node - Insert a node
+ *@head: Header of the list
  *@number: Number
- *Return: Null if fails or the address directtion
+ *Return: Null if fails or the address of the new node
  */
 listint_t *insert_node(listint_t **head, int number)
 {
