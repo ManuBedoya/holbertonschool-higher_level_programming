@@ -9,10 +9,10 @@
  */
 listint_t *insert_node(listint_t **head, int number)
 {
-	if (head == NULL || *head == NULL)
-		return (NULL);
 	listint_t *node, *aux, *ant;
 
+	if (head == NULL || *head == NULL)
+		return (NULL);
 	aux = *head;
 	ant = aux;
 	node = malloc(sizeof(listint_t));
