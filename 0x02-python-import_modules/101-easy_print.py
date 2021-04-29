@@ -1,2 +1,2 @@
 #!/usr/bin/python3
-import pprint; pprint.pprint('#pythoniscool')
+from easyprint import pr; pr('#pythoniscool')
