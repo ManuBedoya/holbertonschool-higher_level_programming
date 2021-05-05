@@ -1,2 +1,4 @@
 #!/usr/bin/python3
-from easyprint import pr; pr('#pythoniscool')
+from easyprint import pr
+st="hola"
+pr(st)
