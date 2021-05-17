@@ -8,5 +8,5 @@ def safe_print_integer_err(value):
         return True
     except (TypeError, ValueError):
         e = sys.exc_info()[1]
-        print("Exception: {}".format(e.args[0]), file = sys.stderr)
+        print("Exception: {}".format(e.args[0]), file=sys.stderr)
         return False
