@@ -1,7 +1,11 @@
 #!/usr/bin/python3
 def list_division(my_list_1, my_list_2, list_length):
     newList = []
-    iterators = len(my_list_1) if (len(my_list_1) > len(my_list_2)) else len(my_list_2)
+    iterators = 0
+    if (len(my_list_1) > len(my_list_2)):
+        iterators = len(my_list_1)
+    else:
+        iterators = len(my_list_2)
     number = 0
     for i in range(iterators):
         try:
