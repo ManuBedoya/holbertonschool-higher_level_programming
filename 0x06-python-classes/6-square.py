@@ -7,6 +7,12 @@ class Square:
     """This is the Square class
     """
     def __init__(self, size=0, position=(0, 0)):
+        """This is the __init__ method
+        Is to initianilize the variables
+        Args:
+          size (int): size square
+          position (tuple): position in x and y
+        """
         self.__size = size
         self.__position = position
 
