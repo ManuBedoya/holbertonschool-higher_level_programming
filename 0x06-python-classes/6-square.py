@@ -14,6 +14,11 @@ class Square:
           position (tuple): position in x and y
         """
         self.__size = size
+
+        if type(position) != tuple or len(position) != 2 or type(position[0]) != int\
+           or type(position[1]) != int \
+           or position[0] < 0 or position[1] < 0:
+            raise TypeError('position must be a tuple of 2 positive integers')
         self.__position = position
 
     @property
@@ -32,12 +37,11 @@ class Square:
         Args:
             value (tuple): position
         """
-        if type(value) != tuple or len(value) != 2 or type(value[0]) !=  int\
+        if type(value) != tuple or len(value) != 2 or type(value[0]) != int\
            or type(value[1]) != int \
            or value[0] < 0 or value[1] < 0:
             raise TypeError('position must be a tuple of 2 positive integers')
-        else:
-            self.__position = value
+        self.__position = value
 
     @property
     def size(self):
