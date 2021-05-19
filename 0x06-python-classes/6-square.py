@@ -26,12 +26,13 @@ class Square:
         Args:
             value (tuple): position
         """
-        if isinstance(value, tuple) and len(value) == 2 and \
-           isinstance(value[0], int) and isinstance(value[0], int) \
-           and value[0] < 0 and value[1] < 0:
-            self.__position = value
-        else:
+        if not isinstance(new_position, tuple) or len(new_position) != 2 \
+           or not isinstance(new_position[0], int)\
+           or not isinstance(new_position[1], int) \
+           or new_position[0] < 0 or new_position[1] < 0:
             raise TypeError("position must be a tuple of 2 positive integers")
+        else:
+            self.__position = new_position
 
     @property
     def size(self):
