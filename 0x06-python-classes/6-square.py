@@ -27,11 +27,12 @@ class Square:
             value (tuple): position
         """
         if (isinstance(tuple, value)):
-            if (len(value) == 2):
-                if (value[1] >= 0 and value[0] >= 0):
-                    self.__position = value
-        else:
-            raise TypeError("position must be a tuple of 2 positive integers")
+            if (isinstance(int, value[0]) and isinstance(int, value[1])):
+                if (len(value) == 2):
+                    if (value[1] >= 0 and value[0] >= 0):
+                        self.__position = value
+                        pass
+        raise TypeError("position must be a tuple of 2 positive integers")
 
     @property
     def size(self):
