@@ -75,6 +75,20 @@ class Square:
         """
         return self.__size ** 2
 
+    def my_print(self):
+        """This is the my_print method
+        Is to print the square with #
+        """
+        if (self.__size == 0):
+            print()
+
+        else:
+            for i in range(self.__position[1]):
+                print()
+        for row in range(self.__size):
+            print(" " * self.__position[0], end="")
+            print("#" * self.__size)
+
     def __str__(self):
         """This is the my_print method
         Is to print the square with #
