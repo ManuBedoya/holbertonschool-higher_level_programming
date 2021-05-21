@@ -10,8 +10,8 @@ class Rectangle:
         """This is __init__ method
         Is to initianilize the variables
         """
-        self.__width = width
-        self.__height = height
+        self.width = width
+        self.height = height
 
     @property
     def width(self):
