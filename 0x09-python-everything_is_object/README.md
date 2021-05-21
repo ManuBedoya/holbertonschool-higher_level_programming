@@ -35,6 +35,7 @@ about manage classes
 | `26-answer.txt` | a = (), b = () , a is b ? |
 | `27-answer.txt` | id(a) is 1929, a = [1, 2], a = a + [5], id(a) is 1929 ? |
 | `28-answer.txt` | id(a) is 1929, a = [1, 2], a += [5], id(a) is 1929 ? |
+| `100-magic_string.py` | function that return Holberton, n times |
 | `101-locked_class.py` | function that contain a locked class |
 
 ## Authors
