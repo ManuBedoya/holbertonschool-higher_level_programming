@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 """Module have the matrix_divided to dived a matrix
 """
+
+
 def matrix_divided(matrix, div):
     """This is the matrix_divided function
     Args:

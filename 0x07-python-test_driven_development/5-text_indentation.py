@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 """Module have a function to do the identation
 """
+
+
 def text_indentation(text):
     """This is the textIdentation function
     Print the text idented

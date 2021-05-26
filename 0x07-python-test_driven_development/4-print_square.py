@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 """Modulo have function print_square
 """
+
+
 def print_square(size):
     """This is the print_square function
     Print a square with # symbols
