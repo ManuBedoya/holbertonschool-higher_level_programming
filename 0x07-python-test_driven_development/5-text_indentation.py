@@ -1,5 +1,12 @@
 #!/usr/bin/python3
+"""Module have a function to do the identation
+"""
 def text_indentation(text):
+    """This is the textIdentation function
+    Print the text idented
+    Args:
+       text (Str): Text to do the identation
+    """
     if type(text) != str:
         raise TypeError('text must be a string')
     st = True

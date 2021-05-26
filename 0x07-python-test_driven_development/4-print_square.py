@@ -1,5 +1,12 @@
 #!/usr/bin/python3
+"""Modulo have function print_square
+"""
 def print_square(size):
+    """This is the print_square function
+    Print a square with # symbols
+    Args:
+       size (int positive): Square's size
+    """
     if (type(size) != int) or (type(size) == float and size < 0):
         raise TypeError('size must be an integer')
     if size < 0:

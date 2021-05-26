@@ -1,5 +1,13 @@
 #!/usr/bin/python3
+"""Module have a function say_my_name
+"""
 def say_my_name(first_name, last_name=""):
+    """This is say_my_name function
+    Print the name of a person
+    Args:
+       first_name (str): first name of the person
+       last_name (str): last name of the person
+    """
     if type(first_name) != str:
         raise TypeError('first_name must be a string')
     if type(last_name) != str:

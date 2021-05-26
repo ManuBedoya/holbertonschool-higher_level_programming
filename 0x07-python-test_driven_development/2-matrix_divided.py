@@ -1,5 +1,14 @@
 #!/usr/bin/python3
+"""Module have the matrix_divided to dived a matrix
+"""
 def matrix_divided(matrix, div):
+    """This is the matrix_divided function
+    Args:
+      matrix (list): List of numbers
+      div (int/float): divisor number
+    Returns:
+       New list with the results
+    """
     if type(div) != int and type(div) != float:
         raise TypeError('div must be a number')
     if div == 0:
