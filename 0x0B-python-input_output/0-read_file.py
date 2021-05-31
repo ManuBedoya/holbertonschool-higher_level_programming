@@ -1,13 +1,8 @@
 #!/usr/bin/python3
-"""Read a file
-"""
+"""Read a file"""
 
 
 def read_file(filename=""):
-    """This is the read_file method
-    Is to read a file
-    Args:
-       filename (str): Name of the file
-    """
+    """This is the read_file method"""
     with open(filename, enconding='utf-8') as file:
         print(file.read(), end='')
