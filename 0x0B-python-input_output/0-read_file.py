@@ -9,6 +9,6 @@ def read_file(filename=""):
     Args:
        filename (str): Name of the file
     """
-    with open(filename, 'r') as file:
+    with open(filename, enconding='utf-8') as file:
         read_data = file.read()
     print(read_data)
