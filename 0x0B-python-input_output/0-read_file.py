@@ -4,5 +4,5 @@
 
 def read_file(filename=""):
     """This is the read_file method"""
-    with open(filename, enconding='utf-8') as file:
+    with open(filename, encoding='utf-8') as file:
         print(file.read(), end='')
