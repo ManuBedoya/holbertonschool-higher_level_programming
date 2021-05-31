@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""The module to create a json file to add items"""
 from pathlib import Path
 import sys
 
