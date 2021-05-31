@@ -1,5 +1,9 @@
 #!/usr/bin/python3
+"""The module to simulate pascal triangle"""
+
+
 def pascal_triangle(n):
+    """Calculate a pascal triangle"""
     list_triangle = []
     if n <= 0:
         return list_triangle
