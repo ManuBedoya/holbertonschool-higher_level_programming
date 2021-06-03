@@ -1,15 +1,6 @@
 #!/usr/bin/python3
 """Module to create a BaseGeometry class"""
-
-
-class BaseGeometry:
-    """BaseGeometry class
-    """
-    def integer_validator(self, name, value):
-        if not type(value) == int:
-            raise TypeError('{} must be an integer'.format(name))
-        if value <= 0:
-            raise ValueError('{} must be greater than 0'.format(name))
+BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
 class Rectangle(BaseGeometry):
@@ -25,4 +16,5 @@ class Rectangle(BaseGeometry):
         return self.__width * self.__height
 
     def __str__(self):
-        return '[Rectangle] ' + str(self.__width) + '/' + str(self.__height)
+        return '[Rectangle] {:d}/{:d}'.format(str(self.__width),\
+                                              str(self.__height))
