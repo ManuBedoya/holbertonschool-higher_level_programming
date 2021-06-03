@@ -4,6 +4,12 @@
 
 
 def add_attribute(a_class, name, value):
+    """add a new attribute
+    Args:
+      a_class (object): object
+      name : key
+      value : value
+    """
     types = ['str', [], {}, (1, 1), 1.1, 1, None]
     for item in types:
         if type(a_class) == type(item):
