@@ -3,7 +3,10 @@
 
 
 def is_kind_of_class(obj, a_class):
-    if isinstance(obj.__class__, a_class) or\
-       issubclass(obj.__class__, a_class):
+    """Evaluate kind of class
+    """
+    if isinstance(obj.__class__, a_class):
+        return True
+    if issubclass(obj.__class__, a_class):
         return True
     return False
