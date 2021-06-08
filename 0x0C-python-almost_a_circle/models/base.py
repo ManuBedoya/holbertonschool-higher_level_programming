@@ -23,6 +23,11 @@ class Base:
 
     @staticmethod
     def to_json_string(list_dictionaries):
+        """Falta
+        de
+        documentacion
+        """
+
         if list_dictionaries is None:
             return []
         else:
@@ -30,6 +35,11 @@ class Base:
 
     @classmethod
     def save_to_file(cls, list_objs):
+        """Falta
+        de
+        documentacion
+        """
+
         temp_dicts = []
         if list_objs:
             for obj in list_objs:
@@ -40,6 +50,11 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string):
+        """Falta
+        de
+        documentacion
+        """
+
         if json_string is None or json_string == '':
             return []
         else:
@@ -47,6 +62,11 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
+        """Falta
+        de
+        documentacion
+        """
+
         if cls.__name__ == 'Rectangle':
             obj = cls(1, 1)
         else:
@@ -57,6 +77,11 @@ class Base:
 
     @classmethod
     def load_from_file(cls):
+        """Falta
+        de
+        documentacion
+        """
+
         list_instances = []
         try:
             with open(cls.__name__ + '.json', 'r', encoding='utf-8') as file:
