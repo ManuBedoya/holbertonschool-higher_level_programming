@@ -53,7 +53,7 @@ class Rectangle(Base):
            The height
         """
 
-        return self.__width
+        return self.__height
 
     @height.setter
     def height(self, value):
@@ -74,7 +74,7 @@ class Rectangle(Base):
            The width
         """
 
-        return self.__width
+        return self.__x
 
     @x.setter
     def x(self, value):
@@ -96,7 +96,7 @@ class Rectangle(Base):
            The width
         """
 
-        return self.__width
+        return self.__y
 
     @y.setter
     def y(self, value):
