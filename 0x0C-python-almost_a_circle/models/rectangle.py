@@ -27,10 +27,19 @@ class Rectangle(Base):
 
     @property
     def width(self):
+        """method width
+        Returns:
+           The width
+        """
+
         return self.__width
 
     @width.setter
     def width(self, value):
+        """method width
+           Set the width
+        """
+
         if type(value) != int:
             raise TypeError('width must be an integer')
         if value <= 0:
@@ -39,10 +48,20 @@ class Rectangle(Base):
 
     @property
     def height(self):
+        """method heigth
+        Returns:
+           The height
+        """
+
         return self.__width
 
     @height.setter
     def height(self, value):
+                """method width
+        Returns:
+           The width
+        """
+
         if type(value) != int:
             raise TypeError('height must be an integer')
         if value <= 0:
@@ -51,10 +70,20 @@ class Rectangle(Base):
 
     @property
     def x(self):
+        """method width
+        Returns:
+           The width
+        """
+
         return self.__width
 
     @x.setter
     def x(self, value):
+        """method width
+        Returns:
+           The width
+        """
+
         if type(value) != int:
             raise TypeError('x must be an integer')
         if value < 0:
@@ -63,10 +92,20 @@ class Rectangle(Base):
 
     @property
     def y(self):
+        """method width
+        Returns:
+           The width
+        """
+
         return self.__width
 
     @y.setter
     def y(self, value):
+        """method width
+        Returns:
+           The width
+        """
+
         if type(value) != int:
             raise TypeError('y must be an integer')
         if value < 0:
@@ -74,9 +113,19 @@ class Rectangle(Base):
         self.__y = value
 
     def area(self):
+        """method width
+        Returns:
+           The width
+        """
+
         return self.__width * self.__height
 
     def display(self):
+        """method width
+        Returns:
+           The width
+        """
+
         for i in range(self.__y):
             print()
         for i in range(self.__height):
@@ -84,6 +133,10 @@ class Rectangle(Base):
             print('#' * self.__width, file=sys.stdout)
 
     def update(self, *args, **kwargs):
+        """method width
+        Returns:
+           The width
+        """
 
         if args is None or len(args) == 0:
             for item in kwargs:
@@ -117,10 +170,20 @@ class Rectangle(Base):
                 self.y = args[4]
 
     def to_dictionary(self):
+        """method width
+        Returns:
+           The width
+        """
+
         return {'id': self.id, 'width': self.__width, 'height': self.__height,
                 'x': self.__x, 'y': self.__y}
 
     def __str__(self):
+        """method width
+        Returns:
+           The width
+        """
+
         return '[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}'.format(self.id,
                                                                  self.__x,
                                                                  self.__y,
