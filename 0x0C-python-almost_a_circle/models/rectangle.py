@@ -57,11 +57,10 @@ class Rectangle(Base):
 
     @height.setter
     def height(self, value):
-                """method width
+        """method width
         Returns:
            The width
         """
-
         if type(value) != int:
             raise TypeError('height must be an integer')
         if value <= 0:
