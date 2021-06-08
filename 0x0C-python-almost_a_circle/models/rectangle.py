@@ -5,7 +5,6 @@ import sys
 from .base import Base
 
 
-
 class Rectangle(Base):
     """Rectangle class
     """
@@ -39,6 +38,7 @@ class Rectangle(Base):
         if value <= 0:
             raise ValueError('height must be > 0')
         self.__height = value
+
     @property
     def x(self):
         return self.__width
@@ -105,7 +105,6 @@ class Rectangle(Base):
 
             if (len_args > 4):
                 self.y = args[4]
-
 
     def to_dictionary(self):
         return {'id': self.id, 'width': self.__width, 'height': self.__height,
