@@ -8,19 +8,37 @@ class Square(Rectangle):
     """Rectangle class
     """
     def __init__(self, size, x=0, y=0, id=None):
+        """Falta
+        de
+        documentacion
+        """
         self.size = size
         super().__init__(size, size, x, y, id)
 
     @property
     def size(self):
+        """Falta
+        de
+        documentacion
+        """
+
         return self._Rectangle__width
 
     @size.setter
     def size(self, value):
+        """Falta
+        de
+        documentacion
+        """
+
         self.heigth = value
         self.width = value
 
     def update(self, *args, **kwargs):
+        """Falta
+        de
+        documentacion
+        """
 
         if args is None or len(args) == 0:
             for item in kwargs:
@@ -51,11 +69,21 @@ class Square(Rectangle):
                 self.y = args[3]
 
     def to_dictionary(self):
+        """Falta
+        de
+        documentacion
+        """
+
         return {'id': self.id, 'size': self._Rectangle__width,
                 'x': self._Rectangle__x,
                 'y': self._Rectangle__y}
 
     def __str__(self):
+        """Falta
+        de
+        documentacion
+        """
+
         msg = '[Square] ({:d}) {:d}/{:d} - {:d}'
         return msg.format(self.id, self._Rectangle__x, self._Rectangle__y,
                           self._Rectangle__width)
