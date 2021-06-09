@@ -60,3 +60,27 @@ class TestRectangle(unittest.TestCase):
         except Exception as err:
             pass
         self.assertRaises(ValueError)
+
+    def test_area(self):
+        """Test with the area
+        """
+        r1 = Rectangle(5, 6)
+        self.assertEqual(r1.area(), 30)
+
+        r1.width = 8
+        self.assertEqual(r1.area(), 48)
+
+    def test_str(self):
+        """Test __str__ function
+        """
+        r1 = Rectangle(10, 34, 0, 0, 12)
+        self.assertEqual(str(r1), '[Rectangle] (12) 0/0 - 10/34')
+
+        r2 = Rectangle(12, 1, 7, 8, 100)
+        self.assertEqual(str(r2), '[Rectangle] (100) 7/8 - 12/1')
+
+    def test_display(self):
+        """test of display the rectangle
+        """
+        r1 = Rectangle(4, 6)
+        self.assertEqual(r1.display(),None)
