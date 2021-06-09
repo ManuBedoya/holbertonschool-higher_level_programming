@@ -2,13 +2,14 @@
 """ In this module, testing related to Base class will be done. """
 import unittest
 from models.base import Base
+from models.rectangle import Rectangle
 
 
 class TestBase(unittest.TestCase):
     """ Test the base class """
 
     def test_without_arguments(self):
-        """ Test cases of normal initialization """
+        """ Test cases witout ids """
         b1 = Base()
         self.assertEqual(b1.id, 1)
 
@@ -40,3 +41,13 @@ class TestBase(unittest.TestCase):
 
         b4 = Base(123)
         self.assertEqual(b4.id, 123)
+
+    def test_errors(self):
+        b4 = Base('2')
+        self.assertRaises(TypeError)
+        b4 = Base(-1)
+        self.assertRaises(ValueError)
+
+    def test_to_json_string(self):
+        json_string = Base.to_json_string(None)
+        self.assertEqual(json_string, '[]')
