@@ -136,37 +136,14 @@ class Rectangle(Base):
         Returns:
            The width
         """
-
-        if args is None or len(args) == 0:
-            for item in kwargs:
-                if hasattr(self, item):
-                    if item == 'id':
-                        self.id = kwargs[item]
-                    if item == 'width':
-                        self.width = kwargs[item]
-                    if item == 'height':
-                        self.height = kwargs[item]
-                    if item == 'x':
-                        self.x = kwargs[item]
-                    if item == 'y':
-                        self.y = kwargs[item]
+        vars = ['id', 'width', 'height', 'x', 'y']
+        if args:
+            for i in range(len(args)):
+                setattr(self, vars[i], args[i])
         else:
-            len_args = len(args)
-
-            if (len_args > 0):
-                self.id = args[0]
-
-            if (len_args > 1):
-                self.width = args[1]
-
-            if (len_args > 2):
-                self.height = args[2]
-
-            if (len_args > 3):
-                self.x = args[3]
-
-            if (len_args > 4):
-                self.y = args[4]
+            for i in kwargs.keys():
+                if i in dir(self):
+                    setattr(self, i, kwargs.get(i))
 
     def to_dictionary(self):
         """method width
