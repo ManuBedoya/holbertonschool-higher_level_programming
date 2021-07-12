@@ -1,2 +1,2 @@
---Print databases
+-- SHOW all:
 SHOW DATABASES;
