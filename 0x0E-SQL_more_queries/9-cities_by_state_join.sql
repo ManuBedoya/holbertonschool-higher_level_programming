@@ -1,4 +1,6 @@
 -- PRINT ALL CITIES
-SELECT c.id, c.name, s.name FROM cities as c
-INNER JOIN states as s
-ON s.id = c.state_id;
+SELECT cities.id, citites.name, states.name
+FROM cities
+INNER JOIN states
+ON states.id = cities.state_id
+ORDER BY cities.id ASC;
