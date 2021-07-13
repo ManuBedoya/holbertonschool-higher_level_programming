@@ -1,4 +1,5 @@
 -- PRINT CITIES OF CALIFORNIA
-SELECT c.id, c.name FROM states as s, cities as c
-WHERE s.id = c.state_id
-AND s.name = "California";
+SELECT cities.id, cities.name FROM states, cities
+WHERE states.id = cities.state_id
+AND states.name = "California"
+ORDER BY cities.id ASC;
