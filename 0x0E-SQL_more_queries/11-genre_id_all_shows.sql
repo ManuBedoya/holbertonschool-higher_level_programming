@@ -1,6 +1,6 @@
 -- PRINT ALL SHOWS
-SELECT ts.title, tsg.genre_id
-FROM tv_shows as ts
-LEFT JOIN tv_show_genres as tsg
-ON ts.id = tsg.show_id
-ORDER BY ts.title;
+SELECT tv_shows.title, tv_show_genres.genre_id
+FROM tv_shows
+LEFT JOIN tv_show_genres
+ON tv_shows.id = tv_show_genres.show_id
+ORDER BY tv_shows.title;
