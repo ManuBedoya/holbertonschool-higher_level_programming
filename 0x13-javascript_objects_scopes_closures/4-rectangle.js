@@ -4,6 +4,7 @@ class Rectangle {
     if (w > 0 && h > 0) {
       this.width = w;
       this.height = h;
+      this.letter = 'X';
     }
   }
 
@@ -11,7 +12,7 @@ class Rectangle {
     for (let i = 0; i < this.height; i++) {
       let secuence = '';
       for (let j = 0; j < this.width; j++) {
-        secuence += 'X';
+        secuence += this.letter;
       }
       console.log(secuence);
     }
