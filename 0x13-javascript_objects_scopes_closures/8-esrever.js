@@ -1,9 +1,9 @@
 #!/usr/bin/node
 module.exports.esrever = function (list) {
-  const list_rev = [];
+  const listRev = [];
   const len = list.length;
   for (let i = 0; i < len; i++) {
-    list_rev.push(list.pop());
+    listRev.push(list.pop());
   }
-  return list_rev;
+  return listRev;
 };
