@@ -12,6 +12,7 @@ if __name__ == '__main__':
     cursor.execute(sql)
     data = cursor.fetchall()
     for item in data:
-        print(item)
+        if item[1][0] == 'N':
+            print(item)
 
     db.close()
