@@ -10,7 +10,7 @@ if __name__ == '__main__':
     cursor = db.cursor()
 
     sql = "SELECT * FROM states WHERE name=%s ORDER BY states.id ASC"
-    cur.execute(sql , (sys.argv[4],))
+    cursor.execute(sql , (sys.argv[4],))
     data = cursor.fetchall()
     for item in data:
         print(item)
