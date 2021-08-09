@@ -8,7 +8,8 @@ if __name__ == '__main__':
     db = MySQLdb.connect('localhost', sys.argv[1], sys.argv[2], sys.argv[3])
     cursor = db.cursor()
 
-    sql = "SELECT * FROM states INNER JOIN cities ON states.id = cities.state_id WHERE states.name LIKE %s ORDER BY cities.id ASC"
+    sql = "SELECT * FROM states INNER JOIN cities ON states.id=cities.state_id\
+    WHERE states.name LIKE %s ORDER BY cities.id ASC"
 
     cursor.execute(sql, (sys.argv[4], ))
     data = cursor.fetchall()
