@@ -1,6 +1,10 @@
 #!/usr/bin/python3
-# Find a pick
+"""Fin the pick
+"""
+
 def find_peak(list_of_integers):
+    """Method to find the pick
+    """
     if len(list_of_integers) == 0:
         return (None)
     else:
