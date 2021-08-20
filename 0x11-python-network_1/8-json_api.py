@@ -11,13 +11,11 @@ if __name__ == '__main__':
     else:
         values = {"q": ""}
 
+    r = requests.post('http://0.0.0.0:5000/search_user', data=values)
     try:
-        r = requests.post('http://0.0.0.0:5000/search_user', data=values)
-        if r.text == "{}\n":
-            print("No result")
+        if bool(r.json()):
+            print("[{}] {}".format(r.json()["id"], r.json()["name"]))
         else:
-            catch_var = r.text.split(":")
-            print("[{}] {}".format(catch_var[1].split(",")[0],
-                                   catch_var[2][1:-3]))
+            print("No result")
     except ValueError:
         print("Not a valid JSON")
