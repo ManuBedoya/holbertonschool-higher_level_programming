@@ -23,7 +23,7 @@ const options = {
 };
 
 const req = https.request(options, res => {
-  console.log(`statusCode: ${res.statusCode}`);
+  console.log(`code: ${res.statusCode}`);
 });
 
 req.on('error', error => {
