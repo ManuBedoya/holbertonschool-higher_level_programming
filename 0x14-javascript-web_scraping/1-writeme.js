@@ -1,8 +1,4 @@
 #!/usr/bin/node
-const fs = require('fs');
+const request = require('request');
 
-fs.writeFile(process.argv[2], process.argv[3], err => {
-  if (err) {
-    console.log(err);
-  }
-});
+console.log('code: ' + request.get(process.argv[2]));
