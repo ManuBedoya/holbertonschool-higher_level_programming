@@ -1,21 +1,19 @@
 #!/usr/bin/node
 const request = require('request');
 
-const users = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+const users = {};
 
 request(process.argv[2], function (error, response, body) {
-  if (error) { console.log(error); }
   const array = JSON.parse(body);
-  for (let i = 0; i < array.length; i++) {
-    if (array[i].completed) { users[array[i].userId - 1]++; }
+  const numberUsers = array[array.length - 1].userId;
+  for (let i = 1; i <= numberUsers; i++) {
+    users[i] = 0;
   }
-  let res = '{ ';
-  for (let i = 0; i < users.length; i++) {
-    if (i === users.length - 1) {
-      res += `'${i + 1}': ${users[i]} }`;
-    } else {
-      res += `'${i + 1}': ${users[i]}\n  `;
+  if (error) { console.log(error); }
+  for (let i = 0; i < array.length; i++) {
+    if (array[i].completed) {
+      users[array[i].userId]++;
     }
   }
-  console.log(res);
+  console.log(users);
 });
